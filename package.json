@@ -4,7 +4,8 @@
   "description": "Nikola Lazarov's Personal GitHub Webpage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,15 @@
   },
   "homepage": "https://github.com/nikelaz/nikelaz.github.io#readme",
   "devDependencies": {
-    "webpack": "^4.20.2"
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   }
 }
