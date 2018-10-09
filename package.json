@@ -1,0 +1,33 @@
+{
+  "name": "nikelaz.github.io",
+  "version": "1.0.0",
+  "description": "Nikola Lazarov's Personal GitHub Webpage",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikelaz/nikelaz.github.io.git"
+  },
+  "author": "Nikola \"nikelaz\" Lazarov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikelaz/nikelaz.github.io/issues"
+  },
+  "homepage": "https://github.com/nikelaz/nikelaz.github.io#readme",
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
