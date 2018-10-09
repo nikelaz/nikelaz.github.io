@@ -4,7 +4,7 @@
   "description": "Nikola Lazarov's Personal GitHub Webpage",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --mode development",
+    "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/nikelaz/nikelaz.github.io#readme",
   "devDependencies": {
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
