@@ -1,6 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const HelloComponent = props => <p>Hello, {props.name}</p>;
+import '../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
+import '../node_modules/normalize.css/normalize.css';
 
-ReactDOM.render(<HelloComponent name="Nikola" />, document.getElementById('app'));
+import Header from './components/Header';
+
+const Application = props => (
+    <div className="container">
+        <div className="row">
+            <div className="col">
+                <Header />
+            </div>
+        </div>
+    </div>
+);
+
+ReactDOM.render(<Application />, document.getElementById('app'));
