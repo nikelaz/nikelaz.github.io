@@ -21,9 +21,9 @@ a:hover { color: rgba(255, 255, 255, 1); }
 header {
     background-color: #2a3132;
     color: #fff;
-    border-radius: 0.25em;
+    border-radius: 1em;
     padding: 0 1em;
-    margin: 1em 0 0 0;
+    margin: 2em 0 3em 0;
 }
 
 header .Title {
@@ -48,6 +48,14 @@ nav li {
     display: inline-block;
     line-height: 60px;
     padding: 0 1em;
+}
+
+.Statistic {
+    background-color: #336b87;
+    color: #fff;
+    border-radius: 1em;
+    text-align: center;
+    padding: 0.5em 1em;
 }
 
 @media only screen and (max-width: 768px) {
