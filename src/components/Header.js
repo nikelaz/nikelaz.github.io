@@ -4,9 +4,9 @@ import Navigation from './Navigation';
 
 const Header = () => {
     return (<header>
-        <div class="row">
-            <div class="col-md-5">
-                <a class="Title" href="#">Nikola Lazarov</a>
+        <div className="row">
+            <div className="col-md-5">
+                <a className="Title" href="#">Nikola Lazarov</a>
             </div>
             <Navigation />
         </div>

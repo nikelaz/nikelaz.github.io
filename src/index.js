@@ -28,16 +28,15 @@ class Application extends React.Component {
                 userSince: res.created_at.split('-')[0]
             });
         });
+        fetch('https://api.github.com/users/nikelaz/repos')
+        .then(res => res.json())
+        .then(res => console.log(res));
     }
     render() {
         const { following, followers, publicRepos, userSince } = this.state;
         return (
             <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <Header />
-                    </div>
-                </div>
+                <Header />
                 <div className="row">
                     <Statistic description="Public Repos">{publicRepos}</Statistic>
                     <Statistic description="User Since">{userSince}</Statistic>

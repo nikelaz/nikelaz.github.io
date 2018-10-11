@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navigation = () => (<nav class="col-md-7">
+const Navigation = () => (<nav className="col-md-7">
     <ul>
         <li>
             <a href="http://nikolalazarov.com" target="__blank">Portfolio</a>
