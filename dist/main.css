@@ -56,12 +56,12 @@ nav li {
     border-radius: 1em;
     text-align: center;
     padding: 0.5em 1em;
+    margin-bottom: 3em;
 }
 
 .Repos {
     border-radius: 1em;
     border: 1px solid #e5e5e5;
-    margin-top: 3em;
 }
 
 .Repos ul {
