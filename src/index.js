@@ -6,6 +6,8 @@ import '../node_modules/normalize.css/normalize.css';
 
 import Header from './components/Header';
 import Statistic from './components/Statistic';
+import Repos from './components/Repos';
+import Footer from './components/Footer';
 
 class Application extends React.Component {
     constructor(props) {
@@ -14,10 +16,12 @@ class Application extends React.Component {
             followers: 0,
             following: 0,
             publicRepos: 0,
-            userSince: "N/A"
+            userSince: "N/A",
+            repos: []
         }
     }
     componentDidMount() {
+        // Fetch User Statistics
         fetch('https://api.github.com/users/nikelaz')
         .then(res => res.json())
         .then(res => {
@@ -28,12 +32,20 @@ class Application extends React.Component {
                 userSince: res.created_at.split('-')[0]
             });
         });
+
+        // Fetch All Repositories
         fetch('https://api.github.com/users/nikelaz/repos')
         .then(res => res.json())
-        .then(res => console.log(res));
+        .then(res => {
+            const repos = [];
+            res.forEach(node => {
+                repos.push(node.name);
+            });
+            this.setState({repos});
+        });
     }
     render() {
-        const { following, followers, publicRepos, userSince } = this.state;
+        const { following, followers, publicRepos, userSince, repos } = this.state;
         return (
             <div className="container">
                 <Header />
@@ -43,6 +55,10 @@ class Application extends React.Component {
                     <Statistic description="following">{following}</Statistic>
                     <Statistic description="followers">{followers}</Statistic>
                 </div>
+                <div className="row">
+                    <Repos data={repos} />
+                </div>
+                <Footer />
             </div>
         );
     }

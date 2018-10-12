@@ -58,6 +58,32 @@ nav li {
     padding: 0.5em 1em;
 }
 
+.Repos {
+    border-radius: 1em;
+    border: 1px solid #e5e5e5;
+    margin-top: 3em;
+}
+
+.Repos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Repos a {
+    color: #336b87;
+    width: 100%;
+    padding: 1em;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.Repos a:last-of-type {
+    border-bottom: none;
+}
+
+footer { margin: 3em 0; }
+
 @media only screen and (max-width: 768px) {
     nav { text-align: left; }
     nav li:first-of-type { padding-left: 0; }
